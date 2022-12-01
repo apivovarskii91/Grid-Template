@@ -1,40 +1,78 @@
-@use "../../presets/" as *;
-@use "../../mixins/" as *;
+@use "../../presets/index" as *;
+@use "../../mixins/index" as *;
 
 .about {
   background-color: $color-gray-light;
-  padding: 100px 0;
 
   &__container {
-    position: relative;
     display: grid;
-    margin-bottom: $gap;
-    gap: 100px;
-    grid-template-columns: 1fr 271px;
-    max-width: 1340px;
-    margin: auto;
-    padding-right: 20px;
-    padding-left: 20px;
-  }
 
-  &__content p:first-of-type::after {
-    position: absolute;
-    top: 0;
-    width: 2px;
-    height: 200px;
-    content: "";
-    background-color: rgba(99, 117, 136, 0.1);
-    right: -50px;
+    @extend %container;
+
+    @include lg-min {
+      padding: 100px 0;
+      gap: $gap-x5;
+      grid-template-columns: 1fr 271px;
+    }
+
+    @include lg-md {
+      padding: 80px 0;
+      gap: $gap-x2;
+      grid-template-columns: 1fr 271px;
+    }
+
+    @include md {
+      padding: 60px 0;
+    }
+
+    @include md-sm {
+      gap: $gap;
+      grid-template-columns: 1fr 236px;
+    }
+
+    @include sm {
+      gap: 20px;
+      grid-template-columns: 1fr;
+    }
   }
 
   &__content p:first-of-type {
     position: relative;
+    margin-top: -5px;
+
+    &:after {
+      position: absolute;
+      top: 0;
+
+      height: $gap-x5 * 2;
+
+      content: "";
+
+      background-color: $color-dark;
+      border: 1px solid $color-dark-gray;
+
+      @include lg-min {
+        right: -50px;
+      }
+
+      @include lg-md {
+        right: -20px;
+      }
+
+      @include md-sm {
+        right: -10px;
+      }
+
+      @include sm {
+        display: none;
+      }
+    }
+
   }
 
-  &__content p {
-    font-size: 18px;
-    letter-spacing: 1px;
-    line-height: 1.15;
-    color: $color-gray;
+  &__image {
+    display: grid;
+    align-content: center;
+    justify-content: center;
   }
 }

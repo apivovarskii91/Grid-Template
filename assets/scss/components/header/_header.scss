@@ -1,0 +1,16 @@
+@use "../../presets/index" as *;
+@use "../../mixins/index" as *;
+
+.header {
+  position: relative;
+
+  display: grid;
+  align-content: center;
+
+  min-height: 100vh;
+
+  background-color: $color-primary;
+  background-image: url(../img/img-header.png);
+  background-position: 50% 50%;
+  background-size: cover;
+}
