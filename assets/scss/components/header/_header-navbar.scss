@@ -60,7 +60,6 @@
     }
 
     &.active span {
-
       &:nth-child(1),
       &:nth-child(6) {
         transform: rotate(45deg);
@@ -114,7 +113,6 @@
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
       @include unlist(0 (-$gap-sm) 0 0);
     }
-
     @include md {
       position: absolute;
       top: 100%;
@@ -148,7 +146,6 @@
     @include md-min {
       padding: $gap $gap-sm;
     }
-
     @include md {
       padding: $gap-sm $gap;
     }

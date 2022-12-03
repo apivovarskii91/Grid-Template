@@ -4,7 +4,7 @@
 @use "components/header";
 @use "components/sections/skills";
 @use "components/sections/_section-about";
-@use "components/sections/_section-form";
+@use "components/sections/form";
 
 @media(max-width: 992px) {
   .skills__container {
