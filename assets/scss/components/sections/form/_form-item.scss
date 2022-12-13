@@ -1,14 +1,20 @@
-@use "../../../presets/" as *;
-@use "../../../mixins/" as *;
+@use "../../../presets/index" as *;
+@use "../../../mixins/index" as *;
 
 .form-item {
+  @include md-sm {
+    &:nth-last-of-type(3) {
+      grid-column: 1/span 2;
+    }
+  }
+
   &__input {
     display: block;
 
     width: 100%;
     height: $gap-x3;
-    padding-right: $gap-lg;
-    padding-left: $gap-lg;
+    padding-right: 20px;
+    padding-left: 20px;
 
     letter-spacing: 2px;
 
@@ -17,24 +23,29 @@
     border-bottom-color: rgba($color-gray-light, 0.25);
     background-color: rgba($color-gray, 0.05);
 
-    &:hover,
-    &:focus {
-      background-color: rgba($color-gray, 0.15);
-      border-bottom-color: $color-gray-light;
-      background-color: rgba($color-gray, 0.15);
+    font-size: 18px;
+
+    @include lg-min {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+    @include lg-md {
+      font-size: 16px;
+    }
+    @include sm-min {
+      padding-right: 20px;
+      padding-left: 20px;
     }
 
-    font-size: 18px;
+    &:hover,
+    &:focus {
+      border-bottom-color: $color-gray-light;
+      background-color: rgba($color-gray, 0.15);
+      background-color: rgba($color-gray, 0.15);
+    }
 
     &::placeholder {
       color: $color-gray;
-    }
-
-  }
-
-  @include md-sm {
-    &:nth-last-of-type(3) {
-      grid-column: 1/span 2;
     }
   }
 }

@@ -16,6 +16,10 @@
     @include md-min {
       display: none;
     }
+    @include md {
+      width: 25px;
+      height: 13px;
+    }
 
     &-row {
       position: absolute;
@@ -30,6 +34,10 @@
 
       opacity: 1;
       background: $color-light;
+
+      @include md {
+        height: 2px;
+      }
 
       &:nth-child(even) {
         left: 50%;
@@ -51,11 +59,19 @@
       &:nth-child(3),
       &:nth-child(4) {
         top: 9px;
+
+        @include md {
+          top: 7.5px;
+        }
       }
 
       &:nth-child(5),
       &:nth-child(6) {
         top: 18px;
+
+        @include md {
+          top: 15px;
+        }
       }
     }
 
@@ -109,9 +125,9 @@
       display: grid;
       justify-content: end;
 
-      gap: $gap;
+      gap: 17px;
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-      @include unlist(0 (-$gap-sm) 0 0);
+      @include unlist(0 (-13px) 0 0);
     }
     @include md {
       position: absolute;

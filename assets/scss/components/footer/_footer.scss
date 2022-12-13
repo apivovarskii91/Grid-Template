@@ -1,0 +1,82 @@
+@use "../../presets/index" as*;
+@use "../../mixins/index" as*;
+
+.footer {
+  padding: 40px 20px 70px;
+
+  text-align: center;
+
+  background-color: $color-primary;
+
+  @include md-sm {
+    padding: 50px 20px;
+  }
+  @include sm {
+    padding: 48px 20px 60px;
+  }
+
+  &__container {
+    @extend %container;
+  }
+
+  &__soc {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 55px;
+
+
+    &::after {
+      position: absolute;
+      bottom: -23px;
+
+      width: 75px;
+      height: 2px;
+
+      content: "";
+
+      background-color: rgba($color-light, 0.1);
+    }
+
+    a {
+      display: block;
+
+      padding: 10px;
+
+      transition: color 0.5s;
+
+      &:hover,
+      :focus {
+        color: $color-highlight;
+      }
+    }
+
+    .fab {
+      display: block;
+
+      border-radius: 15px;
+
+      font-size: 34px;
+    }
+  }
+
+  &__copy {
+    span {
+      &:nth-of-type(1) {
+        letter-spacing: 4.6px;
+
+        color: $color-gray;
+      }
+
+      &:nth-of-type(2) {
+        letter-spacing: 1px;
+
+        color: $color-gray-light;
+
+        font-weight: 700;
+      }
+    }
+  }
+}

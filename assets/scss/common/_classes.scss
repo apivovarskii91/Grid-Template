@@ -10,13 +10,17 @@
   align-items: center;
   justify-content: center;
 
-  padding: 10px 10px;
+  min-height: 60px;
+  padding: 10px;
 
   transition: background-color 0.25s;
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
 
-  min-height: 60px;
   font-size: 18px;
+
+  @include lg-md {
+    min-height: 64px;
+  }
 
   &:hover,
   &:focus {
@@ -33,15 +37,20 @@
 
       font-size: 18px;
     }
-
     @include lg-md {
-      width: 200px;
-      height: 50px;
-    }
+      min-width: 200px;
+      min-height: 50px;
 
+      letter-spacing: 1.5px;
+
+      font-size: 16px;
+    }
     @include md {
       width: 170px;
-      height: 40px;
+      min-height: 40px;
+      padding: 9px;
+
+      font-size: 16px;
     }
   }
 
@@ -52,7 +61,6 @@
     @include sm-min {
       min-width: 350px;
     }
-
     @include sm {
       min-width: 100%;
     }
@@ -60,10 +68,18 @@
 
   &--primary2 {
     width: 100%;
+
     color: $color-gray-light;
     border: 2px solid rgba($color-primary, 0);
     border-bottom-color: rgba($color-gray-light, 0.25);
     background-color: rgba($color-gray, 0.1);
+
+    @include lg-md {
+      min-height: 60px;
+      padding: 8px 10px;
+
+      font-size: 16px;
+    }
 
     &:hover,
     &:focus {

@@ -21,6 +21,8 @@ a {
   text-decoration: none;
 
   color: $color-light;
+
+  font-family: $font-main;
 }
 
 h1 {
@@ -37,17 +39,20 @@ h1 {
   @include lg-min {
     font-size: 3.75rem;
   }
-
   @include lg-md {
     font-size: 2.5rem;
   }
-
   @include md {
     font-size: 1.875rem;
+  }
+  @include sm {
+    line-height: 38px;
   }
 }
 
 h2 {
+  margin-top: 0;
+
   letter-spacing: 0.1em;
 
   color: $color-primary;
@@ -56,49 +61,73 @@ h2 {
   line-height: 1.2em;
 
   @include lg-min {
-    font-size: 40px;
-    margin-bottom: 3rem;
-  }
+    margin-bottom: 59px;
 
+    font-size: $gap-x2;
+  }
   @include lg-md {
-    font-size: 32px;
     margin-bottom: 42px;
-  }
 
+    letter-spacing: 3px;
+
+    font-size: 32px;
+  }
   @include md-sm {
-    font-size: 24px;
-    margin-bottom: 36px;
-  }
+    margin-bottom: 29px;
 
-  @include sm {
     font-size: 24px;
-    margin-bottom: 36px;
+    line-height: 32px;
+  }
+  @include sm {
+    margin-bottom: 23px;
+
     text-align: center;
+
+    font-size: 24px;
+    line-height: 31px;
   }
 }
 
-p {
+h3 {
+  margin: 0 0 20px;
+
+  transition: color 0.5s;
+  text-align: center;
   letter-spacing: 1px;
 
   color: $color-gray;
 
+  font-family: $font-header;
   font-size: 18px;
-  line-height: 1.15;
+
+  @include lg-md {
+    margin: 0 0 27px;
+  }
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 16px;
+
+  letter-spacing: 0.9px;
+
+  color: $color-gray;
+
+  line-height: 24px;
 
   @include lg-min {
     font-size: 18px;
   }
-
+  @include lg-md {
+    font-size: 18px;
+  }
   @include sm-min {
+    margin-top: -5px;
+    margin-bottom: 20px;
+
     font-size: 16px;
   }
-
   @include sm {
     font-size: 16px;
   }
-}
-
-img {
-  max-width: 100%;
-  max-height: 480px;
 }

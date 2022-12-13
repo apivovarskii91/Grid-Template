@@ -37,12 +37,12 @@ $local-gap: calc(40px / 3);
       grid-template-columns: 1fr;
     }
 
-    @media (min-height: 691px) {
+    @media (min-height: 1051px) {
       grid-auto-rows: calc(33.3333vh - #{$local-gap});
     }
 
-    @media (max-height: 690px) {
-      grid-auto-rows: calc(230px - #{$local-gap});
+    @media (max-height: 1050px) {
+      grid-auto-rows: calc(363.34px - #{$local-gap});
     }
   }
 
