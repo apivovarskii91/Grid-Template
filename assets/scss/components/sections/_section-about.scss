@@ -2,101 +2,97 @@
 @use "../../mixins/index" as *;
 
 .about {
+  letter-spacing: 0.055em;
+
   background-color: $color-gray-light;
+
+  @include lg-min {
+    padding-top: $gap-x5;
+    padding-bottom: $gap-x5;
+  }
+  @include lg-md {
+    padding-top: $gap-x4;
+    padding-bottom: $gap-x4;
+  }
+  @include md {
+    padding-top: $gap-x3;
+    padding-bottom: $gap-x3;
+  }
 
   &__container {
     display: grid;
 
     @extend %container;
     @include lg-min {
-      padding-top: 95px;
-      padding-bottom: 75px;
-
-      gap: 91px;
+      gap: 100px;
       grid-template-columns: 1fr 271px;
     }
     @include lg-md {
-      padding-top: 80px;
-      padding-bottom: 55px;
-
-      gap: 50px;
+      gap: 40px;
       grid-template-columns: 1fr 271px;
     }
     @include md-sm {
-      padding-top: 58px;
-      padding-bottom: 32px;
-
-      gap: 74px;
+      gap: $gap;
       grid-template-columns: 1fr 236px;
     }
     @include sm {
-      padding-top: 60px;
-      padding-bottom: 67px;
-
       gap: $gap;
       grid-template-columns: 1fr;
     }
   }
 
-  &__content p:first-of-type {
-    position: relative;
+  &__content {
+    @include lg-min {
+      font-size: 18px;
+    }
 
-    &:after {
-      position: absolute;
-      top: 0;
+    p:first-of-type {
+      position: relative;
 
-      width: 1px;
-      height: $gap-x5 * 2;
-      margin: 0 -3px 0;
+      margin-top: -5px;
 
-      content: "";
+      &:after {
+        position: absolute;
+        top: 0;
 
-      background-color: rgba($color-dark-gray, 0.1);
+        width: 2px;
+        height: $gap-x5 * 2;
 
-      @include lg-min {
-        right: -50px;
+        content: "";
+
+        background-color: rgba($color-dark-gray, 0.1);
+
+        @include lg-min {
+          right: -50px;
+        }
+        @include lg-md {
+          right: -20px;
+        }
+        @include md-sm {
+          right: -10px;
+        }
+        @include sm {
+          display: none;
+        }
       }
-      @include lg-md {
-        top: -10px;
-        right: -20px;
-      }
-      @include md-sm {
-        right: 0;
-      }
-      @include sm {
-        display: none;
-      }
+    }
+
+    p:last-of-type {
+      margin: 0;
     }
   }
 
   &__image {
     display: grid;
-    align-content: flex-start;
-    justify-content: center;
+    align-content: center;
 
-    @include lg-min {
-      align-content: flex-end;
+    margin-top: 0;
 
-      margin-top: 5px;
-    }
-    @include md {
-      margin-top: -22px;
-    }
-    @include sm {
-      margin-top: 0;
-    }
-
+    justify-items: center;
 
     img {
       max-width: 100%;
-      max-height: 485px;
-
-      @include lg-md {
-        max-height: 460px;
-      }
-      @include sm {
-        max-height: 490px;
-      }
+      max-height: 480px;
     }
   }
 }

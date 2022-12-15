@@ -6,8 +6,8 @@
     position: relative;
 
     width: 30px;
-    height: 22.5px;
-    margin: 25px 0 25px auto;
+    height: 23px;
+    margin-left: auto;
 
     cursor: pointer;
     transition: 0.5s ease-in-out;
@@ -15,10 +15,6 @@
 
     @include md-min {
       display: none;
-    }
-    @include md {
-      width: 25px;
-      height: 13px;
     }
 
     &-row {
@@ -34,10 +30,6 @@
 
       opacity: 1;
       background: $color-light;
-
-      @include md {
-        height: 2px;
-      }
 
       &:nth-child(even) {
         left: 50%;
@@ -59,19 +51,11 @@
       &:nth-child(3),
       &:nth-child(4) {
         top: 9px;
-
-        @include md {
-          top: 7.5px;
-        }
       }
 
       &:nth-child(5),
       &:nth-child(6) {
         top: 18px;
-
-        @include md {
-          top: 15px;
-        }
       }
     }
 
@@ -125,9 +109,9 @@
       display: grid;
       justify-content: end;
 
-      gap: 17px;
+      gap: 20px;
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-      @include unlist(0 (-13px) 0 0);
+      @include unlist(0 (-10px) 0 0);
     }
     @include md {
       position: absolute;

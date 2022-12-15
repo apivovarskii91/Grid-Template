@@ -5,7 +5,8 @@
   position: relative;
   z-index: 1;
 
-  margin-top: 150px;
+  padding-top: 150px;
+  padding-bottom: 150px;
 
   &__container {
     @extend %container;
@@ -13,17 +14,13 @@
 
   &__title {
     @include lg-min {
-      margin: 0 0 50px;
+      margin: 0 0 53px;
     }
     @include lg-md {
       margin: 0 0 43px;
     }
-    @include md-sm {
-      margin-bottom: 30px;
-    }
-    @include sm {
-      max-width: 325px;
-      margin: 0 auto 40px;
+    @include md {
+      margin: 0 0 33px;
     }
   }
 
@@ -34,6 +31,7 @@
     gap: $gap;
     @include sm {
       align-items: center;
+      flex-direction: column;
     }
   }
 }

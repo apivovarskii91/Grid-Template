@@ -2,18 +2,11 @@
 @use "../../mixins/index" as*;
 
 .footer {
-  padding: 40px 20px 70px;
+  padding: 50px 20px 70px;
 
   text-align: center;
 
   background-color: $color-primary;
-
-  @include md-sm {
-    padding: 50px 20px;
-  }
-  @include sm {
-    padding: 48px 20px 60px;
-  }
 
   &__container {
     @extend %container;
@@ -25,12 +18,13 @@
     display: flex;
     justify-content: center;
 
-    margin-bottom: 55px;
+    margin-bottom: 40px;
 
 
     &::after {
       position: absolute;
-      bottom: -23px;
+      bottom: -20px;
+      left: calc(50% - 37.5px);
 
       width: 75px;
       height: 2px;
@@ -58,20 +52,22 @@
 
       border-radius: 15px;
 
-      font-size: 34px;
+      font-size: 36px;
     }
   }
 
   &__copy {
     span {
       &:nth-of-type(1) {
-        letter-spacing: 4.6px;
+        margin-right: -0.5em;
 
-        color: $color-gray;
+        letter-spacing: 0.33em;
+
+        font-weight: 100;
       }
 
       &:nth-of-type(2) {
-        letter-spacing: 1px;
+        letter-spacing: 0.05em;
 
         color: $color-gray-light;
 
