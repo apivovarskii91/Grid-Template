@@ -287,7 +287,7 @@ p {
   border: 2px solid #2d3651;
   background-color: rgba(45, 54, 81, 0.8);
 }
-.btn--primary2 {
+.btn--primary__subscribe {
   width: 100%;
 
   color: #ffffff;
@@ -295,8 +295,8 @@ p {
   border-bottom-color: rgba(229, 229, 229, 0.25);
   background-color: rgba(99, 117, 136, 0.3);
 }
-.btn--primary2:hover,
-.btn--primary2:focus {
+.btn--primary__subscribe:hover,
+.btn--primary__subscribe:focus {
   border: 2px solid #ffffff;
 }
 
@@ -342,9 +342,6 @@ p {
   top: 0;
   right: 0;
   left: 0;
-
-  -webkit-box-shadow: -3px 3px 20px -10px black;
-          box-shadow: -3px 3px 20px -10px black;
 }
 .header-menu__container {
   display: grid;
@@ -676,20 +673,24 @@ p {
   padding-right: 20px;
   padding-left: 30px;
 
+  -webkit-transition: background-color 0.5s, border-color 0.5s;
+       -o-transition: background-color 0.5s, border-color 0.5s;
+          transition: background-color 0.5s, border-color 0.5s;
   letter-spacing: 2.7px;
 
   color: #ffffff;
-  border: 2px solid rgba(45, 54, 81, 0);
-  border-bottom-color: rgba(229, 229, 229, 0.25);
-  background-color: rgba(99, 117, 136, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.05);
 
   font-size: 18px;
 }
 .form-item__input:hover,
 .form-item__input:focus {
-  border-bottom-color: #e5e5e5;
-  background-color: rgba(99, 117, 136, 0.15);
-  background-color: rgba(99, 117, 136, 0.15);
+  border-color: rgba(255, 255, 255, 0.15);
+  border-bottom-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 .form-item__input::-webkit-input-placeholder {
   color: #637588;
@@ -705,6 +706,26 @@ p {
 }
 .form-item__input::placeholder {
   color: #637588;
+}
+.form-item__input:hover::-webkit-input-placeholder,
+.form-item__input:focus::-webkit-input-placeholder {
+  color: #8c9bab;
+}
+.form-item__input:hover::-moz-placeholder,
+.form-item__input:focus::-moz-placeholder {
+  color: #8c9bab;
+}
+.form-item__input:hover:-ms-input-placeholder,
+.form-item__input:focus:-ms-input-placeholder {
+  color: #8c9bab;
+}
+.form-item__input:hover::-ms-input-placeholder,
+.form-item__input:focus::-ms-input-placeholder {
+  color: #8c9bab;
+}
+.form-item__input:hover::placeholder,
+.form-item__input:focus::placeholder {
+  color: #8c9bab;
 }
 .posts__grid {
   display: grid;
@@ -989,7 +1010,7 @@ p {
 
     font-size: 16px;
   }
-  .btn--primary2 {
+  .btn--primary__subscribe {
     min-height: 60px;
     padding: 8px 10px;
 
@@ -1040,6 +1061,8 @@ p {
   }
   .header-menu {
     background-color: rgba(68, 89, 110, 0.25);
+    -webkit-box-shadow: -3px 3px 20px -10px black;
+            box-shadow: -3px 3px 20px -10px black;
   }
   .header-navbar__list {
     position: absolute;

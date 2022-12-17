@@ -62,26 +62,26 @@
     @include sm {
       min-width: 100%;
     }
-  }
 
-  &--primary2 {
-    width: 100%;
+    &__subscribe {
+      width: 100%;
 
-    color: $color-light;
-    border: 2px solid rgba($color-primary, 0);
-    border-bottom-color: rgba($color-gray-light, 0.25);
-    background-color: rgba($color-gray, 0.3);
+      color: $color-light;
+      border: 2px solid rgba($color-primary, 0);
+      border-bottom-color: rgba($color-gray-light, 0.25);
+      background-color: rgba($color-gray, 0.3);
 
-    @include lg-md {
-      min-height: $gap-x3;
-      padding: 8px 10px;
+      @include lg-md {
+        min-height: $gap-x3;
+        padding: 8px 10px;
 
-      font-size: 18px;
-    }
+        font-size: 18px;
+      }
 
-    &:hover,
-    &:focus {
-      border: 2px solid $color-light;
+      &:hover,
+      &:focus {
+        border: 2px solid $color-light;
+      }
     }
   }
 }
